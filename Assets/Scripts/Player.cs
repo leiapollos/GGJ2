@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,18 +19,22 @@ public class Player : MonoBehaviour
 
     Transform feet;
 
+    [HideInInspector]
+    public Vector2 velocity;
+    Vector2 lastPos;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         feet = transform.Find("Feet");
+        lastPos = rb.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Jump
-
         IsGrounded = Physics2D.BoxCast(feet.position, new Vector2(FeetWidth, 0.001f), 0, Vector2.down, GroundTestLength, LayerMask.GetMask("Ground"));
 
         if (IsGrounded && Input.GetButtonDown("Jump"))
@@ -58,6 +62,12 @@ public class Player : MonoBehaviour
 
         rb.velocity = new Vector2(GoingRight ? Speed : -Speed, rb.velocity.y);
 
+    }
+
+    void FixedUpdate()
+    {
+        velocity = (rb.position - lastPos) / Time.fixedDeltaTime;
+        lastPos = rb.position;
     }
 
     public void Hit()
