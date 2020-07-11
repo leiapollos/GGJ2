@@ -187,7 +187,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4814352171717685263}
   - component: {fileID: 4814352171717685262}
-  - component: {fileID: 6243193563915388064}
   m_Layer: 0
   m_Name: PlayerTrigger
   m_TagString: Untagged
@@ -235,15 +234,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6243193563915388064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4814352171717685260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b813a569e41a90e4da28166e051cf1b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

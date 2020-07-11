@@ -27,6 +27,6 @@ public class RunEnemy : Enemy
         }
 
         //Runs Toward Player
-        rb.velocity = new Vector2(-Speed, rb.velocity.y);
+        rb.MovePosition(new Vector2(-Speed, rb.velocity.y));
     }
 }
