@@ -126,4 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sections: []
-  ScrollMultiplier: 1
+  ScrollMultiplier: 0.5

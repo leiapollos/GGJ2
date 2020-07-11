@@ -31,7 +31,8 @@ public class Dimension : MonoBehaviour
     void LateUpdate()
     {
         int isPaused = PlayerPrefs.GetInt("isPaused");
-        if(isPaused == 0){
+        if (isPaused == 0)
+        {
             Vector3 camPos = Camera.main.transform.position;
             camPos.z = 0;
             offset = -camPos * ScrollMultiplier;
@@ -39,14 +40,27 @@ public class Dimension : MonoBehaviour
             {
                 for (int y = 0; y < 2; y++)
                 {
-                    var localOffset = new Vector2(offset.x + (x - 1) * width, offset.y + y * height);
-                    localOffset.x = localOffset.x % (width * 2) + width;
-                    localOffset.y = localOffset.y % (height * 2) - height;
+                    var localOffset = new Vector2(offset.x + x * width, offset.y + y * height);
+                    localOffset.x = fmodcirc(localOffset.x, width * 2) - width;
+                    localOffset.y = fmodcirc(localOffset.y, height * 2) - height;
                     backgrounds[x, y].transform.localPosition = localOffset;
                 }
             }
             transform.position = camPos;
         }
+    }
+
+    private float fmodcirc(float f, float div)
+    {
+        while (f < 0)
+        {
+            f += div;
+        }
+        while (f >= div)
+        {
+            f -= div;
+        }
+        return f;
     }
 
     public void SetSections(LevelSection[] sections)
