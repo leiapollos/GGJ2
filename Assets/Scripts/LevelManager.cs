@@ -103,6 +103,9 @@ public class LevelManager : MonoBehaviour
         others.Remove(dimensionName);
         dimensionName = others[rand.Next(others.Count)];
         SpawnInit();
+        
+        //Displayes the dialogue
+        this.GetComponent<DialogueTrigger>().TriggerDialogue();
     }
 
     void GenerateAndClean()
