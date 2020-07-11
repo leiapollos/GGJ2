@@ -6,8 +6,8 @@ public class Enemy : MonoBehaviour
 {
     protected Rigidbody2D rb;
     protected float Gravity = 9.8f;
-    public float Speed;
-    
+    protected float timeCounter = 0;
+
 
     protected void Start()
     {

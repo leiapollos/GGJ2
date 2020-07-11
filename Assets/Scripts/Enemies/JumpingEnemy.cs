@@ -9,6 +9,7 @@ public class JumpingEnemy : Enemy
     Transform feet;
     public float FeetWidth = 1;
     public float JumpHeight = 1;
+    public float Speed;
 
     new void Start()
     {
