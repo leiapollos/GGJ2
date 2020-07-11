@@ -6,12 +6,13 @@ public class LevelManager : MonoBehaviour
 {
     public List<string> DimensionNames;
     public string StartingDimension;
-    Dictionary<string, LevelSection[]> Dimensions = new Dictionary<string, LevelSection[]>();
+    Dictionary<string, Dimension> Dimensions = new Dictionary<string, Dimension>();
     public float SpawnMargin = 1;
     List<LevelSection> spawned = new List<LevelSection>();
     public float InitPlayerHeight = 2;
     Player player;
-    string dimension;
+    string dimensionName;
+    Dimension dimension;
     System.Random rand = new System.Random();
     public float MinTimer, MaxTimer;
     float curTimer;
@@ -21,8 +22,8 @@ public class LevelManager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         LoadSections();
-        SpawnInit(StartingDimension);
-        dimension = StartingDimension;
+        dimensionName = StartingDimension;
+        SpawnInit();
         curTimer = Random.Range(MinTimer, MaxTimer);
     }
 
@@ -30,20 +31,21 @@ public class LevelManager : MonoBehaviour
     {
         foreach (string name in DimensionNames)
         {
-            Dimensions[name] = Resources.LoadAll<LevelSection>("Dimensions/" + name);
+            Dimensions[name] = Resources.LoadAll<Dimension>("Dimensions/" + name)[0];
+            Dimensions[name].SetSections(Resources.LoadAll<LevelSection>("Dimensions/" + name + "/LevelSections"));
         }
     }
 
-    void SpawnInit(string dimension)
+    void SpawnInit()
     {
         Bounds camBounds = Camera.main.OrthographicBounds();
         Vector3 playerPos = player.transform.position;
-
+        dimension = Dimensions[dimensionName].MakeInstance();
         Vector3 lastSpawn = playerPos + (Vector3.down * InitPlayerHeight);
         LevelSection cur;
         do
         {
-            var nextSection = Dimensions[dimension][rand.Next(Dimensions[dimension].Length)];
+            var nextSection = dimension.NextSection();
             cur = Instantiate(
                 nextSection,
                 lastSpawn + nextSection.StartOffset(),
@@ -56,7 +58,7 @@ public class LevelManager : MonoBehaviour
         lastSpawn = playerPos + (Vector3.down * InitPlayerHeight);
         do
         {
-            var nextSection = Dimensions[dimension][rand.Next(Dimensions[dimension].Length)];
+            var nextSection = dimension.NextSection();
             cur = Instantiate(
                 nextSection,
                 lastSpawn + nextSection.EndOffset(),
@@ -70,7 +72,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GenerateAndClean(dimension);
+        GenerateAndClean();
         curTimer -= Time.deltaTime;
         if (curTimer <= 0)
         {
@@ -86,20 +88,21 @@ public class LevelManager : MonoBehaviour
             Destroy(section.gameObject);
         }
         spawned.Clear();
+        Destroy(dimension.gameObject);
         var others = new List<string>(DimensionNames);
-        others.Remove(dimension);
-        dimension = others[rand.Next(others.Count)];
-        SpawnInit(dimension);
+        others.Remove(dimensionName);
+        dimensionName = others[rand.Next(others.Count)];
+        SpawnInit();
     }
 
-    void GenerateAndClean(string dimension)
+    void GenerateAndClean()
     {
         Bounds camBounds = Camera.main.OrthographicBounds();
 
         //right of camera
         while (spawned[spawned.Count - 1].endPos.x < camBounds.max.x)
         {
-            var nextSection = Dimensions[dimension][rand.Next(Dimensions[dimension].Length)];
+            var nextSection = dimension.NextSection();
             var newSection = Instantiate(
                 nextSection,
                 spawned[spawned.Count - 1].endPos + nextSection.StartOffset(),
@@ -116,7 +119,7 @@ public class LevelManager : MonoBehaviour
         //left of camera
         while (spawned[0].startPos.x > camBounds.min.x)
         {
-            var nextSection = Dimensions[dimension][rand.Next(Dimensions[dimension].Length)];
+            var nextSection = dimension.NextSection();
             var newSection = Instantiate(
                 nextSection,
                 spawned[0].startPos + nextSection.EndOffset(),
