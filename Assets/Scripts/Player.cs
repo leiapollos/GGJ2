@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -54,5 +55,10 @@ public class Player : MonoBehaviour
 
             rb.velocity = new Vector2(GoingRight ? Speed : -Speed, rb.velocity.y);
         }
+    }
+
+    public void PlayerDeath()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
