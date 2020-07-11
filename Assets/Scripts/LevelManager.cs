@@ -20,6 +20,17 @@ public class LevelManager : MonoBehaviour
     [HideInInspector]
     public float curTimer;
 
+    int sequencePos = 0;
+
+    [System.Serializable]
+    public class MainSequenceEntry
+    {
+        public string dimensionName;
+        public float duration;
+    }
+
+    public MainSequenceEntry[] MainSequence;
+
     protected bool isPaused = false;
 
     // Start is called before the first frame update
@@ -28,9 +39,17 @@ public class LevelManager : MonoBehaviour
         main = this;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         LoadSections();
-        dimensionName = StartingDimension;
+        if (MainSequence.Length > 0)
+        {
+            dimensionName = MainSequence[0].dimensionName;
+            curTimer = MainSequence[0].duration;
+        }
+        else
+        {
+            dimensionName = StartingDimension;
+            curTimer = Random.Range(MinTimer, MaxTimer);
+        }
         SpawnInit();
-        curTimer = Random.Range(MinTimer, MaxTimer);
     }
 
     void LoadSections()
@@ -85,13 +104,29 @@ public class LevelManager : MonoBehaviour
             curTimer -= Time.deltaTime;
             if (curTimer <= 0)
             {
-                curTimer = Random.Range(MinTimer, MaxTimer);
-                SwitchDimension();
+                sequencePos++;
+                if (sequencePos < MainSequence.Length)
+                {
+                    curTimer = MainSequence[sequencePos].duration;
+                    SwitchDimension(MainSequence[sequencePos].dimensionName);
+                }
+                else
+                {
+                    curTimer = Random.Range(MinTimer, MaxTimer);
+                    SwitchDimension();
+                }
             }
         }
     }
 
     void SwitchDimension()
+    {
+        var others = new List<string>(DimensionNames);
+        others.Remove(dimensionName);
+        SwitchDimension(others[rand.Next(others.Count)]);
+    }
+
+    void SwitchDimension(string dimName)
     {
         foreach (var section in spawned)
         {
@@ -99,11 +134,9 @@ public class LevelManager : MonoBehaviour
         }
         spawned.Clear();
         Destroy(dimension.gameObject);
-        var others = new List<string>(DimensionNames);
-        others.Remove(dimensionName);
-        dimensionName = others[rand.Next(others.Count)];
+        dimensionName = dimName;
         SpawnInit();
-        
+
         //Displayes the dialogue
         this.GetComponent<DialogueTrigger>().TriggerDialogue();
     }

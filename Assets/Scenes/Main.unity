@@ -486,6 +486,13 @@ MonoBehaviour:
   MinTimer: 7.5
   MaxTimer: 15
   curTimer: 0
+  MainSequence:
+  - dimensionName: test
+    duration: 3
+  - dimensionName: test
+    duration: 3
+  - dimensionName: test
+    duration: 3
 --- !u!4 &533882616
 Transform:
   m_ObjectHideFlags: 0
