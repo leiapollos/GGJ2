@@ -23,7 +23,9 @@ public class HealthBar : MonoBehaviour
         for (int i = 0; i < NumHearts; i++)
         {
             Vector3 pos = transform.position + Offset * i * Vector3.right;
-            CurrHearts.Add(Instantiate(heart, pos, Quaternion.identity, this.transform));
+            GameObject obj = Instantiate(heart, pos, Quaternion.identity, this.transform);
+            LeanTween.scale(obj, new Vector3(1.05f, 1.05f, 1.05f), 0.2f).setLoopPingPong();
+            CurrHearts.Add(obj);
         }
     }
 

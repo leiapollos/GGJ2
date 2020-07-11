@@ -591,8 +591,8 @@ MonoBehaviour:
   StartingDimension: test
   SpawnMargin: 1
   InitPlayerHeight: 2
-  MinTimer: 3
-  MaxTimer: 6
+  MinTimer: 20
+  MaxTimer: 30
   curTimer: 0
 --- !u!4 &533882616
 Transform:
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.27450982}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.47058824}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
