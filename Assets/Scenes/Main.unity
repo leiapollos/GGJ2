@@ -971,6 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3655e8f7c62ce4990c9bec4659fbcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseScreen: {fileID: 1955443771}
   ScaleSize: 1.1
   ScaleSpeed: 0.2
 --- !u!4 &1407609756
@@ -1005,7 +1006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1955443769
 MonoBehaviour:
   m_ObjectHideFlags: 0

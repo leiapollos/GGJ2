@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     protected Canvas current;
 
-    protected GameObject pauseScreen;
+    public Canvas pauseScreen;
 
     void Start(){
         if(SceneManager.GetActiveScene().name.Equals("Menu"))
@@ -15,8 +15,7 @@ public class MenuManager : MonoBehaviour
         
         if(SceneManager.GetActiveScene().name.Equals("Main")){
             PlayerPrefs.SetInt("isPaused", 0);
-            pauseScreen = GameObject.Find("PauseScreen");
-            pauseScreen.SetActive(false);
+            pauseScreen.gameObject.SetActive(false);
         }
     }
 
@@ -24,6 +23,7 @@ public class MenuManager : MonoBehaviour
     public float ScaleSpeed = 0.3f;
 
     public void Scale(GameObject obj){
+        Debug.Log("HEHEHHHEE");
         LeanTween.scale(obj, new Vector3(ScaleSize, ScaleSize, ScaleSize), ScaleSpeed).setIgnoreTimeScale(true);
     }
 
@@ -65,12 +65,12 @@ public class MenuManager : MonoBehaviour
             int isPaused = PlayerPrefs.GetInt("isPaused");
             if(isPaused == 1){
                 PlayerPrefs.SetInt("isPaused", 0);
-                pauseScreen.SetActive(false);
+                pauseScreen.gameObject.SetActive(false);
                 Time.timeScale = 1;
 
             }else{
                 PlayerPrefs.SetInt("isPaused", 1);
-                pauseScreen.SetActive(true);
+                pauseScreen.gameObject.SetActive(true);
                 Time.timeScale = 0;
             }
         }
