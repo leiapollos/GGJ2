@@ -51,6 +51,7 @@ public class MenuManager : MonoBehaviour
 
     public void Exit(){
         Application.Quit();
+        Debug.Log("rwybucnsij");
     }
 
     void Update(){
