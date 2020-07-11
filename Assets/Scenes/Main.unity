@@ -1368,6 +1368,7 @@ MonoBehaviour:
   titleText: {fileID: 598134492}
   DialogueText: {fileID: 1909865887}
   animator: {fileID: 1983720263}
+  probabilityOfGlitchedCharacter: 90
 --- !u!4 &1909593139
 Transform:
   m_ObjectHideFlags: 0
