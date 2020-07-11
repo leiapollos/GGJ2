@@ -7,6 +7,9 @@ public class HealthBar : MonoBehaviour
     public float Offset;
     public GameObject heart;
     Player player;
+
+    [Range(0,2)]
+    public float animationSize = 1.15f;
     
     int NumHearts;
     List<GameObject> CurrHearts = new List<GameObject>();
@@ -24,7 +27,7 @@ public class HealthBar : MonoBehaviour
         {
             Vector3 pos = transform.position + Offset * i * Vector3.right;
             GameObject obj = Instantiate(heart, pos, Quaternion.identity, this.transform);
-            LeanTween.scale(obj, new Vector3(1.05f, 1.05f, 1.05f), 0.2f).setLoopPingPong();
+            LeanTween.scale(obj, new Vector3(animationSize, animationSize, animationSize), 0.2f).setLoopPingPong();
             CurrHearts.Add(obj);
         }
     }
