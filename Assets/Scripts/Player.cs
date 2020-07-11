@@ -60,4 +60,14 @@ public class Player : MonoBehaviour
 
     }
 
+    public void Hit()
+    {
+        lives--;
+        if (lives <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
 }
