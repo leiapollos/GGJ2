@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fall : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Fall : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.gameObject.GetComponent<Player>().PlayerDeath();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
