@@ -23,7 +23,6 @@ public class MenuManager : MonoBehaviour
     public float ScaleSpeed = 0.3f;
 
     public void Scale(GameObject obj){
-        Debug.Log("HEHEHHHEE");
         LeanTween.scale(obj, new Vector3(ScaleSize, ScaleSize, ScaleSize), ScaleSpeed).setIgnoreTimeScale(true);
     }
 
