@@ -668,8 +668,8 @@ MonoBehaviour:
   StartingDimension: test
   SpawnMargin: 1
   InitPlayerHeight: 2
-  MinTimer: 3
-  MaxTimer: 6
+  MinTimer: 7.5
+  MaxTimer: 15
   curTimer: 0
 --- !u!4 &533882616
 Transform:

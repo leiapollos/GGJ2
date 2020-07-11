@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(player);
         if (collision.tag == "Player")
         {
             player.Hit();
