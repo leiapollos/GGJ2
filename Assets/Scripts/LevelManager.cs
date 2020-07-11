@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager main;
     public List<string> DimensionNames;
     public string StartingDimension;
     Dictionary<string, Dimension> Dimensions = new Dictionary<string, Dimension>();
@@ -16,13 +17,15 @@ public class LevelManager : MonoBehaviour
     Dimension dimension;
     System.Random rand = new System.Random();
     public float MinTimer, MaxTimer;
-    float curTimer;
+    [HideInInspector]
+    public float curTimer;
 
     protected bool isPaused = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        main = this;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         LoadSections();
         dimensionName = StartingDimension;
@@ -76,7 +79,8 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         int isPaused = PlayerPrefs.GetInt("isPaused");
-        if(isPaused == 0){
+        if (isPaused == 0)
+        {
             GenerateAndClean();
             curTimer -= Time.deltaTime;
             if (curTimer <= 0)

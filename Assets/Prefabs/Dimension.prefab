@@ -126,5 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sections: []
-  BackgroundSprite: {fileID: 21300000, guid: 57e90139d624c9d47b4230336aa26ecf, type: 3}
-  ScrollMultiplier: 0.2
+  ScrollMultiplier: 1
