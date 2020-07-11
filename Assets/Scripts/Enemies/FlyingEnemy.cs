@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class FlyingEnemy : Enemy
 {
-    float timeCounter = 0;
-    void Start()
+    public float Speed;
+    public float DeltaY;
+    new void Start()
     {
         base.Start();
     }
@@ -15,6 +16,6 @@ public class FlyingEnemy : Enemy
     void Update()
     {
         timeCounter += Time.deltaTime;
-        rb.transform.position = new Vector2(rb.velocity.x, (float) Math.Sin(timeCounter)*Speed);
+        rb.transform.position = new Vector2(rb.transform.position.x, (float) Math.Sin(timeCounter * Speed) * DeltaY);
     }
 }

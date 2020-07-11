@@ -54,24 +54,24 @@ public class MenuManager : MonoBehaviour
 
     void Update(){
         if(SceneManager.GetActiveScene().name.Equals("Main")){
-            HandlePause();
+            if(Input.GetKeyDown(KeyCode.Escape)){
+                HandlePause();
+            }   
         }
     }
 
     
     public void HandlePause(){
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            int isPaused = PlayerPrefs.GetInt("isPaused");
-            if(isPaused == 1){
-                PlayerPrefs.SetInt("isPaused", 0);
-                pauseScreen.gameObject.SetActive(false);
-                Time.timeScale = 1;
-
-            }else{
-                PlayerPrefs.SetInt("isPaused", 1);
-                pauseScreen.gameObject.SetActive(true);
-                Time.timeScale = 0;
-            }
+        int isPaused = PlayerPrefs.GetInt("isPaused");
+        if(isPaused == 1){
+            PlayerPrefs.SetInt("isPaused", 0);
+            ResetScale();
+            pauseScreen.gameObject.SetActive(false);
+            Time.timeScale = 1;
+        }else{
+            PlayerPrefs.SetInt("isPaused", 1);
+            pauseScreen.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }

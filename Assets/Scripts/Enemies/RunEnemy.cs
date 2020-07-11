@@ -6,6 +6,7 @@ public class RunEnemy : Enemy
 {
     public bool IsGrounded;
     public float GroundTestLength = 0.1f;
+    public float Speed;
     Transform feet;
     public float FeetWidth = 1;
 
