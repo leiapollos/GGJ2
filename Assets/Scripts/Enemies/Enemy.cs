@@ -22,11 +22,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            player.lives--;
-            if (player.lives <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            player.Hit();
         }
     }
 }

@@ -10,7 +10,12 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
-    private Queue<string> sentences;
+    [Range(0,100)]
+    public int probabilityOfGlitchedCharacter;
+
+    protected Queue<string> sentences;
+
+    protected string glitchedChars = "?!}{()[]&%€$§@";
 
 
     // Start is called before the first frame update
@@ -46,6 +51,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+        StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
 
@@ -55,10 +61,22 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         foreach(char letter in sentence.ToCharArray())
         {
-            DialogueText.text += letter;
-            yield return new WaitForSeconds(0.05f);
+            int glitched = Random.Range(0, 100);
+            if(glitched > probabilityOfGlitchedCharacter
+               && DialogueText.text.Length > 0
+               && glitchedChars.IndexOf(DialogueText.text[DialogueText.text.Length-1]) == -1
+               && letter != ' '
+            ){
+
+                int rand = (int)Random.Range(0, glitchedChars.Length-1);
+                DialogueText.text += glitchedChars[rand];
+
+            }else{
+                DialogueText.text += letter;
+            }
+            yield return new WaitForSeconds(0.01f);
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         DisplayNextSentence();
     }
 

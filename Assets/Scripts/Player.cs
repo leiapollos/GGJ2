@@ -70,4 +70,14 @@ public class Player : MonoBehaviour
         lastPos = rb.position;
     }
 
+    public void Hit()
+    {
+        lives--;
+        if (lives <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+
 }
