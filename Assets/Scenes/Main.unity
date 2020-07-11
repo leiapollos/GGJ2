@@ -1255,11 +1255,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2997480744127546250, guid: 607918cd5101fd2419072049e114c217,
-        type: 3}
-      propertyPath: GrowMultiplier
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5212137217027689633, guid: 607918cd5101fd2419072049e114c217,
         type: 3}
       propertyPath: m_Name
