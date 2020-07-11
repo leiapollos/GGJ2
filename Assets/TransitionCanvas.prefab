@@ -348,7 +348,7 @@ MonoBehaviour:
   GrowMultiplier: 1.5
   TimerStart: 2
   TransitionStart: 0.7
-  TransitionEnd: 0.1
+  TransitionEnd: 0.3
 --- !u!1 &7041865147751593748
 GameObject:
   m_ObjectHideFlags: 0

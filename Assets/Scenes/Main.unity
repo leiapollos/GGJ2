@@ -347,6 +347,7 @@ MonoBehaviour:
   FeetWidth: 1
   GroundTestLength: 0.1
   lives: 3
+  velocity: {x: 0, y: 0}
 --- !u!50 &502687158
 Rigidbody2D:
   serializedVersion: 4
@@ -498,6 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fbd704523dc064eb9d8277c40ee29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FollowStrength: 3
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
