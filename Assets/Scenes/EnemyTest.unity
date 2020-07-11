@@ -245,6 +245,7 @@ MonoBehaviour:
   FeetWidth: 1
   GroundTestLength: 0.1
   lives: 3
+  velocity: {x: 0, y: 0}
 --- !u!50 &1808583246
 Rigidbody2D:
   serializedVersion: 4
@@ -388,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fbd704523dc064eb9d8277c40ee29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FollowStrength: 1
 --- !u!81 &2082295146
 AudioListener:
   m_ObjectHideFlags: 0
@@ -465,6 +467,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4814352171448824912, guid: 3fdbdf84c8069214690de59a88e8761f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4814352171448824927, guid: 3fdbdf84c8069214690de59a88e8761f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -537,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 5684778613527553987, guid: 08d8ab6dd391a46448e5e68493f0f826,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5684778613527553996, guid: 08d8ab6dd391a46448e5e68493f0f826,
         type: 3}

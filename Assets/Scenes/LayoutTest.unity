@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fbd704523dc064eb9d8277c40ee29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FollowStrength: 1
 --- !u!81 &122059174
 AudioListener:
   m_ObjectHideFlags: 0
@@ -767,6 +768,8 @@ MonoBehaviour:
   JumpHeight: 4
   FeetWidth: 1
   GroundTestLength: 0.1
+  lives: 3
+  velocity: {x: 0, y: 0}
 --- !u!50 &475728436
 Rigidbody2D:
   serializedVersion: 4
@@ -1202,6 +1205,7 @@ MonoBehaviour:
   InitPlayerHeight: 2
   MinTimer: 3
   MaxTimer: 6
+  curTimer: 0
 --- !u!4 &1935095433
 Transform:
   m_ObjectHideFlags: 0
