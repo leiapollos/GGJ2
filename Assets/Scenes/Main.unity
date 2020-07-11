@@ -272,6 +272,7 @@ MonoBehaviour:
   JumpHeight: 4
   FeetWidth: 1
   GroundTestLength: 0.1
+  lives: 3
 --- !u!50 &502687158
 Rigidbody2D:
   serializedVersion: 4
