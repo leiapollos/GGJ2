@@ -17,6 +17,8 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + offset;
+        int isPaused = PlayerPrefs.GetInt("isPaused");
+        if(isPaused == 0)
+            transform.position = player.transform.position + offset;
     }
 }

@@ -27,30 +27,32 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Jump
+        int isPaused = PlayerPrefs.GetInt("isPaused");
+        if(isPaused == 0){
+            //Jump
 
-        IsGrounded = Physics2D.BoxCast(feet.position, new Vector2(FeetWidth,0.001f),0,Vector2.down, GroundTestLength, LayerMask.GetMask("Ground"));
+            IsGrounded = Physics2D.BoxCast(feet.position, new Vector2(FeetWidth,0.001f),0,Vector2.down, GroundTestLength, LayerMask.GetMask("Ground"));
 
-        if (IsGrounded && Input.GetButtonDown("Jump")) {
-            IsJumping = true;
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Sqrt(JumpHeight * 2 * Gravity));
-        }
-        if (Input.GetButtonUp("Jump") && IsJumping) {
-            IsJumping = false;
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-        }
+            if (IsGrounded && Input.GetButtonDown("Jump")) {
+                IsJumping = true;
+                rb.velocity = new Vector2(rb.velocity.x, Mathf.Sqrt(JumpHeight * 2 * Gravity));
+            }
+            if (Input.GetButtonUp("Jump") && IsJumping) {
+                IsJumping = false;
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+            }
 
-        if (rb.velocity.y > 0) {
-            rb.velocity += Vector2.down * Gravity * Time.deltaTime;
-        }
-        else {
-            IsJumping = false;
-            rb.velocity += Vector2.down * Gravity * FallMultiplier * Time.deltaTime;
-        }
+            if (rb.velocity.y > 0) {
+                rb.velocity += Vector2.down * Gravity * Time.deltaTime;
+            }
+            else {
+                IsJumping = false;
+                rb.velocity += Vector2.down * Gravity * FallMultiplier * Time.deltaTime;
+            }
 
-        //Horizontal Movement
-        
-        rb.velocity = new Vector2(GoingRight ? Speed : -Speed, rb.velocity.y);
-        
+            //Horizontal Movement
+
+            rb.velocity = new Vector2(GoingRight ? Speed : -Speed, rb.velocity.y);
+        }
     }
 }

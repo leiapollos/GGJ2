@@ -30,20 +30,23 @@ public class Dimension : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 camPos = Camera.main.transform.position;
-        camPos.z = 0;
-        offset = -camPos * ScrollMultiplier;
-        for (int x = 0; x < 2; x++)
-        {
-            for (int y = 0; y < 2; y++)
+        int isPaused = PlayerPrefs.GetInt("isPaused");
+        if(isPaused == 0){
+            Vector3 camPos = Camera.main.transform.position;
+            camPos.z = 0;
+            offset = -camPos * ScrollMultiplier;
+            for (int x = 0; x < 2; x++)
             {
-                var localOffset = new Vector2(offset.x + (x - 1) * width, offset.y + y * height);
-                localOffset.x = localOffset.x % (width * 2) + width;
-                localOffset.y = localOffset.y % (height * 2) - height;
-                backgrounds[x, y].transform.localPosition = localOffset;
+                for (int y = 0; y < 2; y++)
+                {
+                    var localOffset = new Vector2(offset.x + (x - 1) * width, offset.y + y * height);
+                    localOffset.x = localOffset.x % (width * 2) + width;
+                    localOffset.y = localOffset.y % (height * 2) - height;
+                    backgrounds[x, y].transform.localPosition = localOffset;
+                }
             }
+            transform.position = camPos;
         }
-        transform.position = camPos;
     }
 
     public void SetSections(LevelSection[] sections)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class LevelManager : MonoBehaviour
     System.Random rand = new System.Random();
     public float MinTimer, MaxTimer;
     float curTimer;
+
+    protected bool isPaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -72,12 +75,15 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GenerateAndClean();
-        curTimer -= Time.deltaTime;
-        if (curTimer <= 0)
-        {
-            curTimer = Random.Range(MinTimer, MaxTimer);
-            SwitchDimension();
+        int isPaused = PlayerPrefs.GetInt("isPaused");
+        if(isPaused == 0){
+            GenerateAndClean();
+            curTimer -= Time.deltaTime;
+            if (curTimer <= 0)
+            {
+                curTimer = Random.Range(MinTimer, MaxTimer);
+                SwitchDimension();
+            }
         }
     }
 
