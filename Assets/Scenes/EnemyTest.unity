@@ -188,6 +188,7 @@ MonoBehaviour:
   InitPlayerHeight: 2
   MinTimer: 3
   MaxTimer: 6
+  curTimer: 0
 --- !u!4 &1631311767
 Transform:
   m_ObjectHideFlags: 0
@@ -243,6 +244,7 @@ MonoBehaviour:
   JumpHeight: 4
   FeetWidth: 1
   GroundTestLength: 0.1
+  lives: 3
 --- !u!50 &1808583246
 Rigidbody2D:
   serializedVersion: 4
@@ -471,7 +473,7 @@ PrefabInstance:
     - target: {fileID: 4814352171448824927, guid: 3fdbdf84c8069214690de59a88e8761f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4814352171448824927, guid: 3fdbdf84c8069214690de59a88e8761f,
         type: 3}
@@ -606,6 +608,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RunningEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6962360140078035330, guid: 804fcea04cdcb0c4c918ea84341695ef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6962360140078035353, guid: 804fcea04cdcb0c4c918ea84341695ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -729,6 +736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: JumpingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8743760761105797389, guid: 893234c45b44eb444a70bb449a20c561,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 893234c45b44eb444a70bb449a20c561, type: 3}

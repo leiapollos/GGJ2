@@ -7,15 +7,18 @@ public class FlyingEnemy : Enemy
 {
     public float Speed;
     public float DeltaY;
+
+    private float StartY;
     new void Start()
     {
         base.Start();
+        StartY = transform.position.y;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        timeCounter += Time.deltaTime;
-        rb.transform.position = new Vector2(rb.transform.position.x, (float) Math.Sin(timeCounter * Speed) * DeltaY);
+        timeCounter += Time.fixedDeltaTime;
+        rb.MovePosition(new Vector2(rb.transform.position.x, StartY + (float) Math.Sin(timeCounter * Speed) * DeltaY));
     }
 }
