@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
@@ -24,10 +25,12 @@ public class MenuManager : MonoBehaviour
 
     public void Scale(GameObject obj){
         LeanTween.scale(obj, new Vector3(ScaleSize, ScaleSize, ScaleSize), ScaleSpeed).setIgnoreTimeScale(true);
+        LeanTween.scale(obj.GetComponentInChildren<Image>().gameObject, new Vector3(1,1,1), ScaleSpeed).setIgnoreTimeScale(true);
     }
 
     public void StopScale(GameObject obj){
         LeanTween.scale(obj, new Vector3(1.0f, 1.0f, 1.0f), ScaleSpeed).setIgnoreTimeScale(true);
+        LeanTween.scale(obj.GetComponentInChildren<Image>().gameObject, new Vector3(0,0,0), ScaleSpeed).setIgnoreTimeScale(true);
     }
 
     public void LoadGame(){
@@ -43,7 +46,8 @@ public class MenuManager : MonoBehaviour
 
     public void ResetScale(){
         GameObject[] btns = GameObject.FindGameObjectsWithTag("Button");
-        foreach(GameObject bt in btns){
+        foreach(GameObject bt in btns)
+        {
             bt.GetComponent<RectTransform>().localScale = new Vector3(1.0f, 1.0f, 1.0f);
         }
     }
@@ -60,7 +64,6 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    
     public void HandlePause(){
         int isPaused = PlayerPrefs.GetInt("isPaused");
         if(isPaused == 1){
