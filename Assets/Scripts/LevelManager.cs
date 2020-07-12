@@ -34,6 +34,7 @@ public class LevelManager : MonoBehaviour
     protected bool isPaused = false;
 
     protected Camera cam;
+    protected bool isUnity;
 
     // Start is called before the first frame update
     void Start()
