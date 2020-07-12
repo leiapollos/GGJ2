@@ -295,3 +295,9 @@ MonoBehaviour:
   - name: glitchStep5
     clip: {fileID: 8300000, guid: f0f7c3494285a784b83d1a1183890787, type: 3}
     volume: 0.6
+  - name: Jump
+    clip: {fileID: 8300000, guid: dbed6311c99bef648bb7894c8e7eb92f, type: 3}
+    volume: 0.2
+  - name: Dialog
+    clip: {fileID: 8300000, guid: 2823d3aa0989c9a4fa53610bc7663f03, type: 3}
+    volume: 0.05

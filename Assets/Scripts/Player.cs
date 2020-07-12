@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
         if (IsGrounded && Input.GetButtonDown("Jump"))
         {
             IsJumping = true;
+            sounds.PlayOnce("Jump");
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Sqrt(JumpHeight * 2 * Gravity));
         }
         if (Input.GetButtonUp("Jump") && IsJumping)
