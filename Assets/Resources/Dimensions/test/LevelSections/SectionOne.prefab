@@ -22496,11 +22496,21 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[1138].second.m_AllTileFlags
       value: 1073741825
       objectReference: {fileID: 0}
+    - target: {fileID: 4159851729337668505, guid: 6dbe516eeda31884fafd091e0d4055c4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.9372549
+      objectReference: {fileID: 0}
     - target: {fileID: 6014366366154742728, guid: 6dbe516eeda31884fafd091e0d4055c4,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 6840952143614971922, guid: 6dbe516eeda31884fafd091e0d4055c4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 85b5cd400252a784ea0317fdaf8e1a76, type: 2}
     - target: {fileID: 7684269530164724928, guid: 6dbe516eeda31884fafd091e0d4055c4,
         type: 3}
       propertyPath: m_Color.r
