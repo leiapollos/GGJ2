@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public Vector2 velocity;
     Vector2 lastPos;
     new SpriteRenderer renderer;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
         lastPos = rb.position;
         sounds = GetComponent<AudioPlayer>();
         renderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -47,7 +49,7 @@ public class Player : MonoBehaviour
     {
         //Jump
         IsGrounded = Physics2D.BoxCast(feet.position, new Vector2(FeetWidth, 0.001f), 0, Vector2.down, GroundTestLength, LayerMask.GetMask("Ground"));
-
+        animator.SetBool("Grounded", IsGrounded);
         if (IsGrounded && Input.GetButtonDown("Jump"))
         {
             IsJumping = true;
