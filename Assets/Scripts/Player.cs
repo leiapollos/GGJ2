@@ -16,7 +16,10 @@ public class Player : MonoBehaviour
     public float GroundTestLength = 0.1f;
     public int lives = 3;
     public int MaxStep = 5;
-    
+    public float InvincibilityTime = 2;
+    public float BlinkTime = 0.2f;
+    bool invincible;
+
     AudioPlayer sounds;
     System.Random rand = new System.Random();
 
@@ -26,6 +29,7 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public Vector2 velocity;
     Vector2 lastPos;
+    new SpriteRenderer renderer;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +38,7 @@ public class Player : MonoBehaviour
         feet = transform.Find("Feet");
         lastPos = rb.position;
         sounds = GetComponent<AudioPlayer>();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -77,10 +82,14 @@ public class Player : MonoBehaviour
 
     public void Hit()
     {
-        lives--;
-        if (lives <= 0)
+        if (!invincible)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(Invincibility());
+            lives--;
+            if (lives <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 
@@ -90,11 +99,32 @@ public class Player : MonoBehaviour
         {
             string dimension = LevelManager.main.dimensionName;
             int indexStep = rand.Next(1, MaxStep + 1);
-            sounds.PlayOnce(dimension+ "Step" + indexStep);
+            sounds.PlayOnce(dimension + "Step" + indexStep);
         }
 
     }
 
+    IEnumerator Invincibility()
+    {
+        invincible = true;
+        float t = 0;
+        Color c;
+        while (t < InvincibilityTime)
+        {
+            c = renderer.color;
+            if (t % BlinkTime < BlinkTime / 2)
+                c.a = 0;
+            else
+                c.a = 1;
+            renderer.color = c;
+            yield return 0;
+            t += Time.deltaTime;
+        }
+        c = renderer.color;
+        c.a = 1;
+        renderer.color = c;
+        invincible = false;
+    }
 
 
 }
