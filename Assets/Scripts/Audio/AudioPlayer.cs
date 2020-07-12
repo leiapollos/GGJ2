@@ -114,6 +114,26 @@ public class AudioPlayer : MonoBehaviour
         else throw new AudioClipNotFoundException(name);
     }
 
+    public void SetLoopTime(string name, float time)
+    {
+        if (clips.ContainsKey(name))
+        {
+            var source = loopSources[name];
+            source.time = time;
+        }
+        else throw new AudioClipNotFoundException(name);
+    }
+
+    public float GetLoopTime(string name)
+    {
+        if (clips.ContainsKey(name))
+        {
+            var source = loopSources[name];
+            return source.time;
+        }
+        else throw new AudioClipNotFoundException(name);
+    }
+
     IEnumerator FadeOut(AudioSource source, float FadeTime)
     {
         float startVol = source.volume;
@@ -138,4 +158,5 @@ public class AudioPlayer : MonoBehaviour
             t += Time.deltaTime;
         }
     }
+
 }

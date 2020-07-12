@@ -38,6 +38,10 @@ public class LevelManager : MonoBehaviour
     protected Camera cam;
     protected bool isUnity;
 
+    public float AudioBPM = 140;
+    public int BeatsPerMesure = 32;
+    public float AudioOffset = -0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +60,7 @@ public class LevelManager : MonoBehaviour
             dimensionName = StartingDimension;
             curTimer = Random.Range(MinTimer, MaxTimer);
         }
+        sounds.PlayLoop(dimensionName);
         SpawnInit();
 
         StartCoroutine(Dialogue());
@@ -84,8 +89,6 @@ public class LevelManager : MonoBehaviour
         Vector3 playerPos = player.transform.position;
         dimension = Dimensions[dimensionName].MakeInstance();
 
-        ////Play sound
-        sounds.PlayLoop(dimensionName);
         Vector3 lastSpawn = playerPos + (Vector3.down * InitPlayerHeight);
         LevelSection cur;
         do
@@ -125,7 +128,8 @@ public class LevelManager : MonoBehaviour
             curTimer -= Time.deltaTime;
             if (curTimer <= 0)
             {
-                if(isUnity){
+                if (isUnity)
+                {
                     UnityDimensionManager.Instance.Switch();
                     isUnity = false;
                 }
@@ -138,18 +142,17 @@ public class LevelManager : MonoBehaviour
                 if (sequencePos < MainSequence.Length)
                 {
                     curTimer = MainSequence[sequencePos].duration;
-                    ///StopSound
-                    sounds.StopLoop(dimensionName);
                     SwitchDimension(MainSequence[sequencePos].dimensionName);
                 }
                 else
                 {
-                    if(Random.Range(0,100) > 85){
+                    if (Random.Range(0, 100) > 85)
+                    {
                         UnityDimensionManager.Instance.Switch();
                         isUnity = true;
                     }
                     curTimer = Random.Range(MinTimer, MaxTimer);
-                    sounds.StopLoop(dimensionName);
+
                     SwitchDimension();
                 }
             }
@@ -171,7 +174,13 @@ public class LevelManager : MonoBehaviour
         }
         spawned.Clear();
         Destroy(dimension.gameObject);
+        float prevAudioT = sounds.GetLoopTime(dimensionName);
+        float beatSize = 60 / (AudioBPM / BeatsPerMesure);
+        float offset = prevAudioT % beatSize;
+        sounds.StopLoop(dimensionName);
         dimensionName = dimName;
+        sounds.PlayLoop(dimensionName);
+        sounds.SetLoopTime(dimensionName, offset + AudioOffset);
         SpawnInit();
     }
 
