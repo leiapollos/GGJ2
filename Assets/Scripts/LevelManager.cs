@@ -9,6 +9,8 @@ public class LevelManager : MonoBehaviour
     public static LevelManager main;
     public List<string> DimensionNames;
     public string StartingDimension;
+    public bool StarterHasTime = true;
+    public float StartingDimensionTime = 6;
     Dictionary<string, Dimension> Dimensions = new Dictionary<string, Dimension>();
     public float SpawnMargin = 1;
     List<LevelSection> spawned = new List<LevelSection>();
@@ -49,25 +51,33 @@ public class LevelManager : MonoBehaviour
         main = this;
         sounds = GetComponent<AudioPlayer>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        LoadSections();
         if (MainSequence.Length > 0)
         {
             dimensionName = MainSequence[0].dimensionName;
             curTimer = MainSequence[0].duration;
         }
+        else if (StarterHasTime)
+        {
+            DimensionNames.Add(StartingDimension);
+            dimensionName = StartingDimension;
+            curTimer = StartingDimensionTime;
+        }
         else
         {
+            DimensionNames.Add(StartingDimension);
             dimensionName = StartingDimension;
             curTimer = Random.Range(MinTimer, MaxTimer);
         }
+        LoadSections();
         sounds.PlayLoop(dimensionName);
         SpawnInit();
 
         StartCoroutine(Dialogue());
-        
+
     }
 
-    IEnumerator Dialogue(){
+    IEnumerator Dialogue()
+    {
         yield return new WaitForSeconds(1f);
         //Displayes the dialogue
         this.GetComponent<DialogueTrigger>().TriggerNextDialogue(isUnity);
@@ -152,10 +162,12 @@ public class LevelManager : MonoBehaviour
                     SwitchDimension();
                 }
 
-                if(isUnity){
+                if (isUnity)
+                {
                     StartCoroutine(Dialogue());
                 }
-                else if(Random.Range(0,100) > 40){
+                else if (Random.Range(0, 100) > 40)
+                {
                     StartCoroutine(Dialogue());
                 }
             }
@@ -164,6 +176,12 @@ public class LevelManager : MonoBehaviour
 
     void SwitchDimension()
     {
+        int i;
+        if ((i = DimensionNames.IndexOf(StartingDimension)) != -1)
+        {
+            DimensionNames.RemoveAt(i);
+            Dimensions.Remove(StartingDimension);
+        }
         var others = new List<string>(DimensionNames);
         others.Remove(dimensionName);
         SwitchDimension(others[rand.Next(others.Count)]);

@@ -279,3 +279,18 @@ MonoBehaviour:
   - name: SuperHealth
     clip: {fileID: 8300000, guid: 68deac90599aed042aed30b1366547ab, type: 3}
     volume: 0.6
+  - name: glitchStep1
+    clip: {fileID: 8300000, guid: 4d7fac409b84904409535a86da1fa6f6, type: 3}
+    volume: 0.6
+  - name: glitchStep2
+    clip: {fileID: 8300000, guid: ce2a3b89d9803424fa2d2db4e897a11b, type: 3}
+    volume: 0.6
+  - name: glitchStep3
+    clip: {fileID: 8300000, guid: f49a9ebc21559f245824d0899a830734, type: 3}
+    volume: 0.6
+  - name: glitchStep4
+    clip: {fileID: 8300000, guid: a0a65bd48643e484da47028ec4094550, type: 3}
+    volume: 0.6
+  - name: glitchStep5
+    clip: {fileID: 8300000, guid: f0f7c3494285a784b83d1a1183890787, type: 3}
+    volume: 0.6
