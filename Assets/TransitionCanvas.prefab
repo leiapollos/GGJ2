@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 888369109975467459}
   - component: {fileID: 261959019910029412}
   - component: {fileID: 8411672877357878537}
+  - component: {fileID: 466150338522591669}
   m_Layer: 5
   m_Name: TransitionCanvas
   m_TagString: Untagged
@@ -174,6 +175,23 @@ MonoBehaviour:
   TransitionStart: 0.2
   TransitionEnd: 0.3
   GlitchFrac: 0.075
+--- !u!114 &466150338522591669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544813973641675298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f1c2cec47b5884aa76a90c8f919ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeTime: 0.25
+  AudioClips:
+  - name: static
+    clip: {fileID: 8300000, guid: fc3700901853b464e87970c0912159a8, type: 3}
+    volume: 1
 --- !u!1 &4367585890555427223
 GameObject:
   m_ObjectHideFlags: 0
