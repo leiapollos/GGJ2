@@ -62,6 +62,16 @@ public class LevelManager : MonoBehaviour
         }
         sounds.PlayLoop(dimensionName);
         SpawnInit();
+
+        StartCoroutine(Dialogue());
+        
+    }
+
+    IEnumerator Dialogue(){
+        yield return new WaitForSeconds(1f);
+        //Displayes the dialogue
+        this.GetComponent<DialogueTrigger>().TriggerNextDialogue(isUnity);
+
     }
 
     void LoadSections()
@@ -123,6 +133,7 @@ public class LevelManager : MonoBehaviour
                     UnityDimensionManager.Instance.Switch();
                     isUnity = false;
                 }
+
                 sequencePos++;
                 if (sequencePos < MainSequence.Length)
                 {
@@ -139,6 +150,13 @@ public class LevelManager : MonoBehaviour
                     curTimer = Random.Range(MinTimer, MaxTimer);
 
                     SwitchDimension();
+                }
+
+                if(isUnity){
+                    StartCoroutine(Dialogue());
+                }
+                else if(Random.Range(0,100) > 40){
+                    StartCoroutine(Dialogue());
                 }
             }
         }
@@ -167,9 +185,6 @@ public class LevelManager : MonoBehaviour
         sounds.PlayLoop(dimensionName);
         sounds.SetLoopTime(dimensionName, offset + AudioOffset);
         SpawnInit();
-
-        //Displayes the dialogue
-        this.GetComponent<DialogueTrigger>().TriggerDialogue();
     }
 
     void GenerateAndClean()

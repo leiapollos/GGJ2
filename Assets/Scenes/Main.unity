@@ -744,7 +744,7 @@ MonoBehaviour:
   titleText: {fileID: 1956281116}
   DialogueText: {fileID: 1045098945}
   animator: {fileID: 396431758}
-  probabilityOfGlitchedCharacter: 90
+  probabilityOfGlitchedCharacter: 93
 --- !u!4 &1909593139
 Transform:
   m_ObjectHideFlags: 0
@@ -1198,6 +1198,201 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[0].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[1].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[2].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[3].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[4].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[5].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[6].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[7].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[8].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[9].sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: unityDimensionDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Wait, why can't Oscar stop running?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.title
+      value: Developers
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: I think something is broken.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[0].title
+      value: Developers
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[0].sentences.Array.data[0]
+      value: Was that a mango on the main menu?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[0].sentences.Array.data[1]
+      value: Who put that there?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[1].title
+      value: Lead Developer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[1].sentences.Array.data[0]
+      value: Wait, why can't Oscar stop running?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[2].title
+      value: Junior Developer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[2].sentences.Array.data[0]
+      value: I think something is broken.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[3].title
+      value: Developer 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[3].sentences.Array.data[0]
+      value: He shouldn't jump that high!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[4].title
+      value: Random Kid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[4].sentences.Array.data[0]
+      value: Something is wrong with the game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[5].title
+      value: Oscar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[5].sentences.Array.data[0]
+      value: That asset looks... wrong.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[6].title
+      value: The Mango
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[6].sentences.Array.data[0]
+      value: " I should\u2019ve gone to law school."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[7].title
+      value: "\xA3?\xA7.\u20AC!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[7].sentences.Array.data[0]
+      value: I told Carlos not to mess with the music.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[8].title
+      value: Git Commit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[8].sentences.Array.data[0]
+      value: Classic, like the mango.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[9].title
+      value: Unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: dialogue.Array.data[9].sentences.Array.data[0]
+      value: Oh $h17 here we go again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: unityDimensionDialogue.title
+      value: Devs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: unityDimensionDialogue.sentences.Array.data[0]
+      value: Why is Unity inside the game?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250493, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: unityDimensionDialogue.sentences.Array.data[1]
+      value: The game is completly broken.
       objectReference: {fileID: 0}
     - target: {fileID: 1839948391734549716, guid: a8dd47ef6405bff4c80f719aa67958e7,
         type: 3}
