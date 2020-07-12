@@ -57,6 +57,16 @@ public class LevelManager : MonoBehaviour
             curTimer = Random.Range(MinTimer, MaxTimer);
         }
         SpawnInit();
+
+        StartCoroutine(Dialogue());
+        
+    }
+
+    IEnumerator Dialogue(){
+        yield return new WaitForSeconds(1f);
+        //Displayes the dialogue
+        this.GetComponent<DialogueTrigger>().TriggerNextDialogue();
+
     }
 
     void LoadSections()
@@ -119,6 +129,11 @@ public class LevelManager : MonoBehaviour
                     UnityDimensionManager.Instance.Switch();
                     isUnity = false;
                 }
+
+                if(Random.Range(0,100) > 40){
+                    StartCoroutine(Dialogue());
+                }
+
                 sequencePos++;
                 if (sequencePos < MainSequence.Length)
                 {
@@ -158,9 +173,6 @@ public class LevelManager : MonoBehaviour
         Destroy(dimension.gameObject);
         dimensionName = dimName;
         SpawnInit();
-
-        //Displayes the dialogue
-        this.GetComponent<DialogueTrigger>().TriggerDialogue();
     }
 
     void GenerateAndClean()

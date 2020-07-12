@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
-    protected bool triggered = false;
+    public List<Dialogue> dialogue;
+    protected int index = 0;
 
-    public void TriggerDialogue(){
-        if(!triggered)
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        triggered = true;
+    public void TriggerNextDialogue(){
+        if(index == 0)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue[0]);
+            index++;
+        }
+        else
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue[(int)Random.Range(1,dialogue.Count-1)]);
+        }
     }
 }
