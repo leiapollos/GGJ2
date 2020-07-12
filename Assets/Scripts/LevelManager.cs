@@ -70,7 +70,6 @@ public class LevelManager : MonoBehaviour
         Bounds camBounds = cam.OrthographicBounds();
         Vector3 playerPos = player.transform.position;
         dimension = Dimensions[dimensionName].MakeInstance();
-        dimension.PlaySound();
         Vector3 lastSpawn = playerPos + (Vector3.down * InitPlayerHeight);
         LevelSection cur;
         do
@@ -146,7 +145,6 @@ public class LevelManager : MonoBehaviour
             Destroy(section.gameObject);
         }
         spawned.Clear();
-        dimension.StopSound();
         Destroy(dimension.gameObject);
         dimensionName = dimName;
         SpawnInit();
