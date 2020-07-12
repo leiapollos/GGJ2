@@ -15,9 +15,6 @@ public class Dimension : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(this.gameObject.name.Equals("UnityDimension")){
-            UnityDimensionManager.Instance.Switch();
-        }
         cam = GameObject.Find("Main Camera Render Texture").GetComponent<Camera>();
         //setup Parallax
         var mainBackground = transform.Find("Background").GetComponent<SpriteRenderer>();

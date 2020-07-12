@@ -184,7 +184,7 @@ MonoBehaviour:
   Gravity: 15
   FallMultiplier: 2
   JumpHeight: 4
-  FeetWidth: 1
+  FeetWidth: 0.5
   GroundTestLength: 0.3
   lives: 3
   MaxStep: 5

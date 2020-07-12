@@ -332,7 +332,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DimensionNames:
   - grass
-  - grass
+  - cave
+  - sand
   StartingDimension: grass
   SpawnMargin: 1
   InitPlayerHeight: 2
@@ -422,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9433962, g: 0, b: 0.5729054, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1106,11 +1107,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8068502059097244709, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: FeetWidth
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8068502059097244713, guid: a63498f412cc37a4cbeb33ad5ed4588d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1536,7 +1532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9433962, g: 0, b: 0.5729054, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1882,8 +1878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540.3, y: 345.7}
-  m_SizeDelta: {x: 742.6233, y: 77.92254}
+  m_AnchoredPosition: {x: 589.95, y: 409.95}
+  m_SizeDelta: {x: 740.0979, y: 52.005516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005244709
 MonoBehaviour:
@@ -1906,10 +1902,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6afb3f9b900af934cb0394c5dd282ca2, type: 3}
-    m_FontSize: 70
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 7
+    m_MinSize: 0
     m_MaxSize: 80
     m_Alignment: 0
     m_AlignByGeometry: 0

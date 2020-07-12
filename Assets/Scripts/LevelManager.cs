@@ -34,6 +34,7 @@ public class LevelManager : MonoBehaviour
     protected bool isPaused = false;
 
     protected Camera cam;
+    protected bool isUnity = false;
 
     // Start is called before the first frame update
     void Start()
@@ -107,6 +108,10 @@ public class LevelManager : MonoBehaviour
             curTimer -= Time.deltaTime;
             if (curTimer <= 0)
             {
+                if(isUnity){
+                    UnityDimensionManager.Instance.Switch();
+                    isUnity = false;
+                }
                 sequencePos++;
                 if (sequencePos < MainSequence.Length)
                 {
@@ -115,6 +120,10 @@ public class LevelManager : MonoBehaviour
                 }
                 else
                 {
+                    if(Random.Range(0,100) > 95){
+                        UnityDimensionManager.Instance.Switch();
+                        isUnity = true;
+                    }
                     curTimer = Random.Range(MinTimer, MaxTimer);
                     SwitchDimension();
                 }
