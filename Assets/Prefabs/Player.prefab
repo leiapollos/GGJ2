@@ -187,7 +187,7 @@ MonoBehaviour:
   FeetWidth: 1
   GroundTestLength: 0.1
   lives: 3
-  MaxStep: 15
+  MaxStep: 5
   velocity: {x: 0, y: 0}
 --- !u!95 &7358681460834893243
 Animator:
@@ -222,48 +222,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeTime: 0.25
   AudioClips:
-  - name: GrassStep1
+  - name: grassStep1
     clip: {fileID: 8300000, guid: 83d4a0aec213b7b4aa4feb3693698302, type: 3}
     volume: 0.4
-  - name: GrassStep2
+  - name: grassStep2
     clip: {fileID: 8300000, guid: dca3a3ad06f53384f96726368cc5d10c, type: 3}
     volume: 0.4
-  - name: GrassStep3
+  - name: grassStep3
     clip: {fileID: 8300000, guid: 9688647a4b46b3c42b16df07f5b03db8, type: 3}
     volume: 0.4
-  - name: GrassStep4
+  - name: grassStep4
     clip: {fileID: 8300000, guid: 9688647a4b46b3c42b16df07f5b03db8, type: 3}
     volume: 0.4
-  - name: GrassStep5
+  - name: grassStep5
     clip: {fileID: 8300000, guid: 45aaef40f1e889b4381c37d16b45fa75, type: 3}
     volume: 0.4
-  - name: SandStep1
+  - name: sandStep1
     clip: {fileID: 8300000, guid: b3a745cdd0a62b444ad5c7a13bca53f5, type: 3}
     volume: 0.4
-  - name: SandStep2
+  - name: sandStep2
     clip: {fileID: 8300000, guid: 3ca2bba5254c6cd40a7f1f5b0fd491c3, type: 3}
     volume: 0.4
-  - name: SandStep3
+  - name: sandStep3
     clip: {fileID: 8300000, guid: 942cef680d6988e448c90b775d7658e8, type: 3}
     volume: 0.4
-  - name: SandStep4
+  - name: sandStep4
     clip: {fileID: 8300000, guid: 17c4e0dc58317e547930a15b38a04636, type: 3}
     volume: 0.4
-  - name: SandStep5
+  - name: sandStep5
     clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
     volume: 0.4
-  - name: GravelStep1
+  - name: gravelStep1
     clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
     volume: 0.4
-  - name: GravelStep2
+  - name: gravelStep2
     clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
     volume: 0.4
-  - name: GravelStep3
+  - name: gravelStep3
     clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
     volume: 0.4
-  - name: GravelStep4
+  - name: gravelStep4
     clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
     volume: 0.4
-  - name: GravelStep5
+  - name: gravelStep5
     clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
     volume: 0.4

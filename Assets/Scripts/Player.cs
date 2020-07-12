@@ -88,8 +88,9 @@ public class Player : MonoBehaviour
     {
         if (IsGrounded)
         {
-            /*int indexStep = rand.Next(1, MaxStep + 1);
-            sounds.PlayOnce("Step" + indexStep);*/
+            string dimension = LevelManager.main.dimensionName;
+            int indexStep = rand.Next(1, MaxStep + 1);
+            sounds.PlayOnce(dimension+ "Step" + indexStep);
         }
 
     }

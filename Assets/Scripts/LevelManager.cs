@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     List<LevelSection> spawned = new List<LevelSection>();
     public float InitPlayerHeight = 2;
     Player player;
-    string dimensionName;
+    public string dimensionName;
     Dimension dimension;
     System.Random rand = new System.Random();
     public float MinTimer, MaxTimer;
