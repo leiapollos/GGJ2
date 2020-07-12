@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class DimensionTransition : MonoBehaviour
 {
-    Transform[] nums = new Transform[3];
+    public List<Transform> nums;
+    //Transform[] nums = new Transform[3];
     Vector3[] scales = new Vector3[3];
-    Image whiteScreen;
+    public Image whiteScreen;
     public float GrowMultiplier;
     public float TimerStart = 3;
     public float TransitionStart = 1, TransitionEnd = 0.2f;
@@ -16,14 +17,14 @@ public class DimensionTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        nums[0] = transform.Find("1");
-        nums[1] = transform.Find("2");
-        nums[2] = transform.Find("3");
+        //nums[0] = transform.Find("1");
+        //nums[1] = transform.Find("2");
+        //nums[2] = transform.Find("3");
         scales[0] = nums[0].localScale;
         scales[1] = nums[1].localScale;
         scales[2] = nums[2].localScale;
         timeSeg = TimerStart / 3;
-        whiteScreen = transform.Find("white").GetComponent<Image>();
+        //whiteScreen = transform.Find("white").GetComponent<Image>();
     }
 
     // Update is called once per frame
