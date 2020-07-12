@@ -15,8 +15,12 @@ public class Player : MonoBehaviour
     public float FeetWidth = 1;
     public float GroundTestLength = 0.1f;
     public int lives = 3;
-    Rigidbody2D rb;
+    public int MaxStep = 5;
+    
+    AudioPlayer sounds;
+    System.Random rand = new System.Random();
 
+    Rigidbody2D rb;
     Transform feet;
 
     [HideInInspector]
@@ -29,6 +33,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         feet = transform.Find("Feet");
         lastPos = rb.position;
+        sounds = GetComponent<AudioPlayer>();
     }
 
     // Update is called once per frame
@@ -77,6 +82,16 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    public void PlayStep()
+    {
+        if (IsGrounded)
+        {
+            /*int indexStep = rand.Next(1, MaxStep + 1);
+            sounds.PlayOnce("Step" + indexStep);*/
+        }
+
     }
 
 
