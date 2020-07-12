@@ -13,6 +13,7 @@ public class GhostEnemy : Enemy
 
     new void Start()
     {
+        base.Start();
         sp = GetComponent<SpriteRenderer>();
         PlayerTrigger = transform.Find("PlayerTrigger").GetComponent<Collider2D>();
     }
