@@ -148,7 +148,7 @@ PrefabInstance:
     - target: {fileID: 619061136881206640, guid: 6dbe516eeda31884fafd091e0d4055c4,
         type: 3}
       propertyPath: m_Name
-      value: empty 1
+      value: BetweenGhosts
       objectReference: {fileID: 0}
     - target: {fileID: 619061136881206645, guid: 6dbe516eeda31884fafd091e0d4055c4,
         type: 3}
@@ -204,6 +204,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333288065377287884, guid: 6dbe516eeda31884fafd091e0d4055c4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333288065377287884, guid: 6dbe516eeda31884fafd091e0d4055c4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4159851729337668505, guid: 6dbe516eeda31884fafd091e0d4055c4,
         type: 3}
