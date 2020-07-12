@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public float JumpHeight = 1;
     public float FeetWidth = 1;
     public float GroundTestLength = 0.1f;
+    public int MaxLives = 6;
     public int lives = 3;
     public int MaxStep = 5;
     public float InvincibilityTime = 2;
@@ -125,6 +126,5 @@ public class Player : MonoBehaviour
         renderer.color = c;
         invincible = false;
     }
-
 
 }
