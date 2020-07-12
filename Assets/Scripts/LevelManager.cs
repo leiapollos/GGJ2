@@ -70,7 +70,7 @@ public class LevelManager : MonoBehaviour
     IEnumerator Dialogue(){
         yield return new WaitForSeconds(1f);
         //Displayes the dialogue
-        this.GetComponent<DialogueTrigger>().TriggerNextDialogue();
+        this.GetComponent<DialogueTrigger>().TriggerNextDialogue(isUnity);
 
     }
 
@@ -134,10 +134,6 @@ public class LevelManager : MonoBehaviour
                     isUnity = false;
                 }
 
-                if(Random.Range(0,100) > 40){
-                    StartCoroutine(Dialogue());
-                }
-
                 sequencePos++;
                 if (sequencePos < MainSequence.Length)
                 {
@@ -154,6 +150,13 @@ public class LevelManager : MonoBehaviour
                     curTimer = Random.Range(MinTimer, MaxTimer);
 
                     SwitchDimension();
+                }
+
+                if(isUnity){
+                    StartCoroutine(Dialogue());
+                }
+                else if(Random.Range(0,100) > 40){
+                    StartCoroutine(Dialogue());
                 }
             }
         }
