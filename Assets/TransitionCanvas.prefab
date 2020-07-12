@@ -175,6 +175,7 @@ MonoBehaviour:
   TransitionStart: 0.2
   TransitionEnd: 0.3
   GlitchFrac: 0.075
+  GlitchVolume: 0.9
 --- !u!114 &466150338522591669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,7 +746,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7218406788958332653}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -839,7 +840,7 @@ RectTransform:
   - {fileID: 7218406788770246350}
   - {fileID: 7218406789618774188}
   m_Father: {fileID: 7218406788958332653}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1196,8 +1197,8 @@ RectTransform:
   - {fileID: 7218406788808079027}
   - {fileID: 435285862995204016}
   - {fileID: 115622383510296599}
-  - {fileID: 7218406787786180550}
   - {fileID: 8243175118602399353}
+  - {fileID: 7218406787786180550}
   m_Father: {fileID: 3644993568516704107}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
