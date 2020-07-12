@@ -186,7 +186,8 @@ MonoBehaviour:
   JumpHeight: 4
   FeetWidth: 0.5
   GroundTestLength: 0.3
-  lives: 3
+  MaxLives: 6
+  lives: 5
   MaxStep: 5
   InvincibilityTime: 2
   BlinkTime: 0.2
