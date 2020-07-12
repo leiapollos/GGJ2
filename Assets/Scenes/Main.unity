@@ -414,13 +414,7 @@ MonoBehaviour:
   MinTimer: 10
   MaxTimer: 20
   curTimer: 0
-  MainSequence:
-  - dimensionName: grass
-    duration: 3
-  - dimensionName: grass
-    duration: 3
-  - dimensionName: grass
-    duration: 3
+  MainSequence: []
 --- !u!4 &533882616
 Transform:
   m_ObjectHideFlags: 0
@@ -1166,6 +1160,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068502059097244713, guid: a63498f412cc37a4cbeb33ad5ed4588d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068502059097244713, guid: a63498f412cc37a4cbeb33ad5ed4588d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a63498f412cc37a4cbeb33ad5ed4588d, type: 3}
