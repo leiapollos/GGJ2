@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
 {
     protected Canvas current;
 
-    public Canvas pauseScreen;
+    public GameObject pauseScreen;
 
     void Start(){
         if(SceneManager.GetActiveScene().name.Equals("Menu"))
@@ -49,6 +49,7 @@ public class MenuManager : MonoBehaviour
         foreach(GameObject bt in btns)
         {
             bt.GetComponent<RectTransform>().localScale = new Vector3(1.0f, 1.0f, 1.0f);
+            bt.GetComponentInChildren<Image>().gameObject.transform.localScale = new Vector3(0,0,0);
         }
     }
 

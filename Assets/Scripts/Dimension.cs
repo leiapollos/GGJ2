@@ -11,12 +11,17 @@ public class Dimension : MonoBehaviour
     public float ScrollMultiplier = 1;
     Vector2 offset;
     float width, height;
+    protected Camera cam;
     // Start is called before the first frame update
     void Start()
     {
+        if(this.gameObject.name.Equals("UnityDimension")){
+            UnityDimensionManager.Instance.Switch();
+        }
+        cam = GameObject.Find("Main Camera Render Texture").GetComponent<Camera>();
         //setup Parallax
         var mainBackground = transform.Find("Background").GetComponent<SpriteRenderer>();
-        var camBounds = Camera.main.OrthographicBounds();
+        var camBounds = cam.OrthographicBounds();
         width = camBounds.size.x;
         height = camBounds.size.y;
         mainBackground.size = new Vector2(camBounds.size.x, camBounds.size.y);
@@ -33,7 +38,7 @@ public class Dimension : MonoBehaviour
         int isPaused = PlayerPrefs.GetInt("isPaused");
         if (isPaused == 0)
         {
-            Vector3 camPos = Camera.main.transform.position;
+            Vector3 camPos = cam.transform.position;
             camPos.z = 0;
             offset = -camPos * ScrollMultiplier;
             for (int x = 0; x < 2; x++)

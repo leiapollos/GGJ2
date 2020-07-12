@@ -33,9 +33,12 @@ public class LevelManager : MonoBehaviour
 
     protected bool isPaused = false;
 
+    protected Camera cam;
+
     // Start is called before the first frame update
     void Start()
     {
+        cam = cam = GameObject.Find("Main Camera Render Texture").GetComponent<Camera>();
         main = this;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         LoadSections();
@@ -63,7 +66,7 @@ public class LevelManager : MonoBehaviour
 
     void SpawnInit()
     {
-        Bounds camBounds = Camera.main.OrthographicBounds();
+        Bounds camBounds = cam.OrthographicBounds();
         Vector3 playerPos = player.transform.position;
         dimension = Dimensions[dimensionName].MakeInstance();
         Vector3 lastSpawn = playerPos + (Vector3.down * InitPlayerHeight);
@@ -143,7 +146,7 @@ public class LevelManager : MonoBehaviour
 
     void GenerateAndClean()
     {
-        Bounds camBounds = Camera.main.OrthographicBounds();
+        Bounds camBounds = cam.OrthographicBounds();
 
         //right of camera
         while (spawned[spawned.Count - 1].endPos.x < camBounds.max.x)
