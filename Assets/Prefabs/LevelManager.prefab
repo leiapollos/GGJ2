@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1582639858494250492}
   - component: {fileID: 1582639858494250483}
   - component: {fileID: 1582639858494250493}
+  - component: {fileID: 1839948391734549716}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -52,8 +53,8 @@ MonoBehaviour:
   SpawnMargin: 1
   InitPlayerHeight: 2
   dimensionName: 
-  MinTimer: 10
-  MaxTimer: 20
+  MinTimer: 20
+  MaxTimer: 30
   curTimer: 0
   MainSequence: []
 --- !u!114 &1582639858494250493
@@ -73,3 +74,29 @@ MonoBehaviour:
     sentences:
     - Hello there, today I will teach you how to drink a glass of water.
     - For starters please get a cup. If you don't have one go buy it!
+--- !u!114 &1839948391734549716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582639858494250482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f1c2cec47b5884aa76a90c8f919ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeTime: 0.25
+  AudioClips:
+  - name: grass
+    clip: {fileID: 8300000, guid: 0369ee3125dfc2645a2d8a6cf3345c12, type: 3}
+    volume: 0.6
+  - name: sand
+    clip: {fileID: 8300000, guid: 155566891e719794bbbeaa9e67d74036, type: 3}
+    volume: 0.6
+  - name: cave
+    clip: {fileID: 8300000, guid: e957f7024fba8954c881fa2c776b4bba, type: 3}
+    volume: 0.6
+  - name: MainSound
+    clip: {fileID: 8300000, guid: e957f7024fba8954c881fa2c776b4bba, type: 3}
+    volume: 0.6
