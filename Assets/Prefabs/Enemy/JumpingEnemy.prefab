@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 8743760761105797376}
   - component: {fileID: 8743760761105797379}
   - component: {fileID: 8743760761105797378}
+  - component: {fileID: 3692388198446002999}
   m_Layer: 10
   m_Name: JumpingEnemy
   m_TagString: Untagged
@@ -162,8 +163,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: e657d226b0e9679468c093f408842dea, type: 3}
-  m_Color: {r: 1, g: 0.9679328, b: 0.07075471, a: 1}
+  m_Sprite: {fileID: -672388805594007808, guid: f03d2cb1decefa745ab88cd17603dfd1,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -186,18 +188,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.003595829}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.9, y: 0.57}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.6}
+  m_Size: {x: 0.6, y: 0.1900878}
   m_EdgeRadius: 0.2
 --- !u!50 &8743760761105797379
 Rigidbody2D:
@@ -237,3 +239,22 @@ MonoBehaviour:
   FeetWidth: 1
   JumpHeight: 2.5
   Speed: 2
+--- !u!95 &3692388198446002999
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743760761105797389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49d9b82e5eef7024dbcda975db173f44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

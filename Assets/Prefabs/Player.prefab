@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 8068502059097244708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.25, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.66, y: 0.66, z: 1}
   m_Children:
   - {fileID: 8068502058910133311}
   m_Father: {fileID: 0}
@@ -184,10 +184,13 @@ MonoBehaviour:
   Gravity: 15
   FallMultiplier: 2
   JumpHeight: 4
-  FeetWidth: 1
+  FeetWidth: 0.5
   GroundTestLength: 0.3
   lives: 3
   MaxStep: 5
+  InvincibilityTime: 2
+  BlinkTime: 0.2
+  sounds: {fileID: 0}
   velocity: {x: 0, y: 0}
 --- !u!95 &7358681460834893243
 Animator:
@@ -252,18 +255,27 @@ MonoBehaviour:
   - name: sandStep5
     clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
     volume: 0.4
-  - name: gravelStep1
-    clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
+  - name: caveStep1
+    clip: {fileID: 8300000, guid: 8841bc84d9737324fb91014e65af11dc, type: 3}
     volume: 0.4
-  - name: gravelStep2
-    clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
+  - name: caveStep2
+    clip: {fileID: 8300000, guid: b3a2eeae7520ac8489545e28af65d1ae, type: 3}
     volume: 0.4
-  - name: gravelStep3
-    clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
+  - name: caveStep3
+    clip: {fileID: 8300000, guid: 5052ec574015ec04b9d8472ba1e64926, type: 3}
     volume: 0.4
-  - name: gravelStep4
-    clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
+  - name: caveStep4
+    clip: {fileID: 8300000, guid: d23f9de3906cb374a8730b46f8ac536d, type: 3}
     volume: 0.4
-  - name: gravelStep5
-    clip: {fileID: 8300000, guid: cb16096a5f7e2e247bee7b40fe74d511, type: 3}
+  - name: caveStep5
+    clip: {fileID: 8300000, guid: 6c02bef81afd0f04aad7b63e5e4f2396, type: 3}
     volume: 0.4
+  - name: Coin
+    clip: {fileID: 8300000, guid: 68deac90599aed042aed30b1366547ab, type: 3}
+    volume: 0.6
+  - name: Health
+    clip: {fileID: 8300000, guid: 68deac90599aed042aed30b1366547ab, type: 3}
+    volume: 0.6
+  - name: SuperHealth
+    clip: {fileID: 8300000, guid: 68deac90599aed042aed30b1366547ab, type: 3}
+    volume: 0.6
