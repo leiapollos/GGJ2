@@ -59,7 +59,6 @@ public class Player : MonoBehaviour
         if (Input.GetButtonUp("Jump") && IsJumping)
         {
             IsJumping = false;
-            sounds.PlayOnce("Jump");
             rb.velocity = new Vector2(rb.velocity.x, 0);
         }
 
@@ -89,6 +88,7 @@ public class Player : MonoBehaviour
     {
         if (!invincible)
         {
+            sounds.PlayOnce("damage");
             StartCoroutine(Invincibility());
             lives--;
             if (lives <= 0)

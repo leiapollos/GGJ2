@@ -653,7 +653,7 @@ PrefabInstance:
     - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
         type: 3}
       propertyPath: AudioClips.Array.size
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
         type: 3}
@@ -1003,7 +1003,22 @@ PrefabInstance:
     - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
         type: 3}
       propertyPath: AudioClips.Array.data[29].volume
-      value: 0.05
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
+        type: 3}
+      propertyPath: AudioClips.Array.data[30].name
+      value: damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
+        type: 3}
+      propertyPath: AudioClips.Array.data[30].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c7292716f220dd4b852463d89c27a05, type: 3}
+    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
+        type: 3}
+      propertyPath: AudioClips.Array.data[30].volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8068502059097244708, guid: a63498f412cc37a4cbeb33ad5ed4588d,
         type: 3}
@@ -1297,7 +1312,7 @@ PrefabInstance:
     - target: {fileID: 8411672877357878537, guid: 8bf1ea37034f0a24b8f963c101ff8320,
         type: 3}
       propertyPath: GlitchVolume
-      value: 0.8
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bf1ea37034f0a24b8f963c101ff8320, type: 3}
