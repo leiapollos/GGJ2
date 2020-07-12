@@ -1,22 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7255415897924139945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8414336902643363352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f1c2cec47b5884aa76a90c8f919ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FadeTime: 0.25
-  AudioClips:
-  - name: Sand
-    clip: {fileID: 8300000, guid: 155566891e719794bbbeaa9e67d74036, type: 3}
-    volume: 0.7
 --- !u!1001 &3924654766270949915
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,14 +69,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
         type: 3}
+      propertyPath: sections.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
+        type: 3}
       propertyPath: soundName
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
+        type: 3}
+      propertyPath: sections.Array.data[0]
+      value: 
+      objectReference: {fileID: 5893973151010701039, guid: ee3c0622d864a7944b0dbaf2663bb85d,
+        type: 3}
+    - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
+        type: 3}
+      propertyPath: sections.Array.data[1]
+      value: 
+      objectReference: {fileID: 6978368151346272213, guid: d7454904e993f7743bc8b6575c5bf4c5,
+        type: 3}
+    - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
+        type: 3}
+      propertyPath: sections.Array.data[2]
+      value: 
+      objectReference: {fileID: 5893973151010701039, guid: 0a0004eacb8dec84ab0bb5e4729eca6a,
+        type: 3}
+    - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
+        type: 3}
+      propertyPath: sections.Array.data[3]
+      value: 
+      objectReference: {fileID: 5893973151010701039, guid: 80aba37e4529be4438de90ca0ef9e1c9,
+        type: 3}
+    - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
+        type: 3}
+      propertyPath: sections.Array.data[4]
+      value: 
+      objectReference: {fileID: 5893973151010701039, guid: 9b2af26177b89d64b8f240720a70678c,
+        type: 3}
+    - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
+        type: 3}
+      propertyPath: sections.Array.data[5]
+      value: 
+      objectReference: {fileID: 5893973151010701039, guid: 48e4500d678dd5f4b804a85937d67333,
+        type: 3}
+    - target: {fileID: 8991877180296636449, guid: 6d07436d7d2696e4889f3e9093686ae5,
+        type: 3}
+      propertyPath: sections.Array.data[6]
+      value: 
+      objectReference: {fileID: 5893973151010701039, guid: 5cfdd505b8cdb374a847a8996ce53266,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d07436d7d2696e4889f3e9093686ae5, type: 3}
---- !u!1 &8414336902643363352 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4806069107241452547, guid: 6d07436d7d2696e4889f3e9093686ae5,
-    type: 3}
-  m_PrefabInstance: {fileID: 3924654766270949915}
-  m_PrefabAsset: {fileID: 0}

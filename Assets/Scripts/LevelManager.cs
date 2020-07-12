@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +20,7 @@ public class LevelManager : MonoBehaviour
     public float MinTimer, MaxTimer;
     [HideInInspector]
     public float curTimer;
+    AudioPlayer sounds;
 
     int sequencePos = 0;
 
@@ -41,6 +43,7 @@ public class LevelManager : MonoBehaviour
     {
         cam = cam = GameObject.Find("Main Camera Render Texture").GetComponent<Camera>();
         main = this;
+        sounds = GetComponent<AudioPlayer>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         LoadSections();
         if (MainSequence.Length > 0)
@@ -70,6 +73,9 @@ public class LevelManager : MonoBehaviour
         Bounds camBounds = cam.OrthographicBounds();
         Vector3 playerPos = player.transform.position;
         dimension = Dimensions[dimensionName].MakeInstance();
+
+        ////Play sound
+        sounds.PlayLoop(dimensionName);
         Vector3 lastSpawn = playerPos + (Vector3.down * InitPlayerHeight);
         LevelSection cur;
         do
@@ -96,6 +102,7 @@ public class LevelManager : MonoBehaviour
             lastSpawn = cur.startPos;
             spawned.Insert(0, cur);
         } while (cur.startPos.x > camBounds.min.x - SpawnMargin);
+
     }
 
     // Update is called once per frame
@@ -116,6 +123,8 @@ public class LevelManager : MonoBehaviour
                 if (sequencePos < MainSequence.Length)
                 {
                     curTimer = MainSequence[sequencePos].duration;
+                    ///StopSound
+                    sounds.StopLoop(dimensionName);
                     SwitchDimension(MainSequence[sequencePos].dimensionName);
                 }
                 else
@@ -125,6 +134,7 @@ public class LevelManager : MonoBehaviour
                         isUnity = true;
                     }
                     curTimer = Random.Range(MinTimer, MaxTimer);
+                    sounds.StopLoop(dimensionName);
                     SwitchDimension();
                 }
             }

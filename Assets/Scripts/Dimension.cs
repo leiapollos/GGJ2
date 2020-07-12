@@ -14,8 +14,7 @@ public class Dimension : MonoBehaviour
     Vector2 offset;
     float width, height;
     protected Camera cam;
-    AudioPlayer sounds;
-    public string soundName;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +34,7 @@ public class Dimension : MonoBehaviour
         backgrounds[0, 1] = Instantiate(mainBackground, transform.position, Quaternion.identity, transform);
         backgrounds[1, 0] = Instantiate(mainBackground, transform.position, Quaternion.identity, transform);
         backgrounds[1, 1] = Instantiate(mainBackground, transform.position, Quaternion.identity, transform);
-        sounds = GetComponent<AudioPlayer>();
+        
 }
 
     // Update is called once per frame
@@ -90,16 +89,5 @@ public class Dimension : MonoBehaviour
         var instance = Instantiate(this);
         instance.sections = sections;
         return instance;
-    }
-
-    public void PlaySound()
-    {
-        Debug.Log("entree");
-        sounds.PlayLoop(soundName);
-    }
-
-    public void StopSound()
-    {
-        sounds.StopLoop(soundName);
     }
 }
