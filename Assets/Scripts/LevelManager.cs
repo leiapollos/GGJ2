@@ -120,7 +120,7 @@ public class LevelManager : MonoBehaviour
                 }
                 else
                 {
-                    if(Random.Range(0,100) > 95){
+                    if(Random.Range(0,100) > 85){
                         UnityDimensionManager.Instance.Switch();
                         isUnity = true;
                     }
