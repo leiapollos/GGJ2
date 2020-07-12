@@ -13,6 +13,7 @@ public class DimensionTransition : MonoBehaviour
     public float TimerStart = 3;
     public float TransitionStart = 1, TransitionEnd = 0.2f;
     public float GlitchFrac = 0.2f;
+    public float GlitchVolume = 0.9f;
     AudioPlayer sounds;
     float timeSeg;
     bool transitioning;
@@ -45,7 +46,7 @@ public class DimensionTransition : MonoBehaviour
                 */
                 bool show = 1 - timer / timeSeg < GlitchFrac;
                 c.a = show ? 1 : 0;
-                sounds.SetLoopVolume("static", show ? 1 : 0);
+                sounds.SetLoopVolume("static", show ? GlitchVolume : 0);
             }
             else if (timer <= 2 * (TimerStart / 3))
             {
@@ -57,7 +58,7 @@ public class DimensionTransition : MonoBehaviour
                 */
                 bool show = 1 - (timer / timeSeg - 1) < GlitchFrac;
                 c.a = 1 - (timer / timeSeg - 1) < GlitchFrac ? 1 : 0;
-                sounds.SetLoopVolume("static", show ? 1 : 0);
+                sounds.SetLoopVolume("static", show ? GlitchVolume : 0);
             }
             else if (timer <= TimerStart)
             {
@@ -69,7 +70,7 @@ public class DimensionTransition : MonoBehaviour
                 */
                 bool show = 1 - (timer / timeSeg - 2) < GlitchFrac;
                 c.a = 1 - (timer / timeSeg - 2) < GlitchFrac ? 1 : 0;
-                sounds.SetLoopVolume("static", show ? 1 : 0);
+                sounds.SetLoopVolume("static", show ? GlitchVolume : 0);
             }
             else
             {
@@ -96,7 +97,7 @@ public class DimensionTransition : MonoBehaviour
         var c = Glitch.color;
         c.a = 1;
         Glitch.color = c;
-        sounds.SetLoopVolume("static", 1);
+        sounds.SetLoopVolume("static", GlitchVolume);
         yield return new WaitForSeconds(TransitionStart);
         sounds.SetLoopVolume("static", 0);
         c.a = 0;
