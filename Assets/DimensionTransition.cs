@@ -13,6 +13,7 @@ public class DimensionTransition : MonoBehaviour
     public float TimerStart = 3;
     public float TransitionStart = 1, TransitionEnd = 0.2f;
     public float GlitchFrac = 0.2f;
+    AudioPlayer sounds;
     float timeSeg;
     bool transitioning;
     // Start is called before the first frame update
@@ -22,6 +23,9 @@ public class DimensionTransition : MonoBehaviour
         scales[1] = nums[1].localScale;
         scales[2] = nums[2].localScale;
         timeSeg = TimerStart / 3;
+        sounds = GetComponent<AudioPlayer>();
+        sounds.PlayLoop("static", 0);
+        sounds.SetLoopVolume("static", 0);
     }
 
     // Update is called once per frame
@@ -39,7 +43,9 @@ public class DimensionTransition : MonoBehaviour
                 nums[2].gameObject.SetActive(false);
                 nums[0].localScale = EasingFunction.EaseInCubic(1, GrowMultiplier, timer / timeSeg) * scales[0];
                 */
-                c.a = 1 - timer / timeSeg < GlitchFrac ? 1 : 0;
+                bool show = 1 - timer / timeSeg < GlitchFrac;
+                c.a = show ? 1 : 0;
+                sounds.SetLoopVolume("static", show ? 1 : 0);
             }
             else if (timer <= 2 * (TimerStart / 3))
             {
@@ -49,7 +55,9 @@ public class DimensionTransition : MonoBehaviour
                 nums[2].gameObject.SetActive(false);
                 nums[1].localScale = EasingFunction.EaseInCubic(1, GrowMultiplier, timer / timeSeg - 1) * scales[1];
                 */
+                bool show = 1 - (timer / timeSeg - 1) < GlitchFrac;
                 c.a = 1 - (timer / timeSeg - 1) < GlitchFrac ? 1 : 0;
+                sounds.SetLoopVolume("static", show ? 1 : 0);
             }
             else if (timer <= TimerStart)
             {
@@ -59,7 +67,9 @@ public class DimensionTransition : MonoBehaviour
                 nums[2].gameObject.SetActive(true);
                 nums[2].localScale = EasingFunction.EaseInCubic(1, GrowMultiplier, timer / timeSeg - 2) * scales[2];
                 */
+                bool show = 1 - (timer / timeSeg - 2) < GlitchFrac;
                 c.a = 1 - (timer / timeSeg - 2) < GlitchFrac ? 1 : 0;
+                sounds.SetLoopVolume("static", show ? 1 : 0);
             }
             else
             {
@@ -68,6 +78,8 @@ public class DimensionTransition : MonoBehaviour
                 nums[1].gameObject.SetActive(false);
                 nums[2].gameObject.SetActive(false);
                 */
+
+                sounds.SetLoopVolume("static", 0);
             }
             Glitch.color = c;
         }
@@ -84,7 +96,9 @@ public class DimensionTransition : MonoBehaviour
         var c = Glitch.color;
         c.a = 1;
         Glitch.color = c;
+        sounds.SetLoopVolume("static", 1);
         yield return new WaitForSeconds(TransitionStart);
+        sounds.SetLoopVolume("static", 0);
         c.a = 0;
         Glitch.color = c;
 

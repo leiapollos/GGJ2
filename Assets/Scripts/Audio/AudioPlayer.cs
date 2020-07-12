@@ -134,6 +134,26 @@ public class AudioPlayer : MonoBehaviour
         else throw new AudioClipNotFoundException(name);
     }
 
+    public void SetLoopVolume(string name, float volume)
+    {
+        if (clips.ContainsKey(name))
+        {
+            var source = loopSources[name];
+            source.volume = volume;
+        }
+        else throw new AudioClipNotFoundException(name);
+    }
+
+    public float GetLoopVolume(string name)
+    {
+        if (clips.ContainsKey(name))
+        {
+            var source = loopSources[name];
+            return source.volume;
+        }
+        else throw new AudioClipNotFoundException(name);
+    }
+
     IEnumerator FadeOut(AudioSource source, float FadeTime)
     {
         float startVol = source.volume;
