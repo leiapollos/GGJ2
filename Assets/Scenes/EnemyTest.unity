@@ -189,6 +189,7 @@ MonoBehaviour:
   MinTimer: 3
   MaxTimer: 6
   curTimer: 0
+  MainSequence: []
 --- !u!4 &1631311767
 Transform:
   m_ObjectHideFlags: 0
