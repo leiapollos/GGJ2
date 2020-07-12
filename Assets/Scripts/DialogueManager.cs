@@ -17,11 +17,14 @@ public class DialogueManager : MonoBehaviour
 
     protected string glitchedChars = "?!}{()[]&%€$§@";
 
+    Player player;
+
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -61,6 +64,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         foreach(char letter in sentence.ToCharArray())
         {
+            player.sounds.PlayOnce("Dialog");
             int glitched = Random.Range(0, 100);
             if(glitched > probabilityOfGlitchedCharacter
                && DialogueText.text.Length > 0
