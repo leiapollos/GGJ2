@@ -1471,8 +1471,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1582639858494250483, guid: a8dd47ef6405bff4c80f719aa67958e7,
         type: 3}
+      propertyPath: DimensionNames.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250483, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
       propertyPath: StartingDimension
       value: starter
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250483, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: DimensionNames.Array.data[3]
+      value: glitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582639858494250483, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: StartingDimensionTime
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1582639858494250492, guid: a8dd47ef6405bff4c80f719aa67958e7,
         type: 3}
@@ -1757,7 +1772,7 @@ PrefabInstance:
     - target: {fileID: 1839948391734549716, guid: a8dd47ef6405bff4c80f719aa67958e7,
         type: 3}
       propertyPath: AudioClips.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1839948391734549716, guid: a8dd47ef6405bff4c80f719aa67958e7,
         type: 3}
@@ -1772,6 +1787,21 @@ PrefabInstance:
     - target: {fileID: 1839948391734549716, guid: a8dd47ef6405bff4c80f719aa67958e7,
         type: 3}
       propertyPath: AudioClips.Array.data[4].volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839948391734549716, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: AudioClips.Array.data[5].name
+      value: glitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839948391734549716, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: AudioClips.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0369ee3125dfc2645a2d8a6cf3345c12, type: 3}
+    - target: {fileID: 1839948391734549716, guid: a8dd47ef6405bff4c80f719aa67958e7,
+        type: 3}
+      propertyPath: AudioClips.Array.data[5].volume
       value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
