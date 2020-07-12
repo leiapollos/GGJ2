@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     public int lives = 3;
     public int MaxStep = 5;
     
-    AudioPlayer sounds;
+    public AudioPlayer sounds;
     System.Random rand = new System.Random();
 
     Rigidbody2D rb;

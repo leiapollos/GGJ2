@@ -8,5 +8,6 @@ public class CoinItem : Item
     public override void Grab()
     {
         Score.Instance.AddScore(coinScore);
+        player.sounds.PlayOnce("Coin");
     }
 }
