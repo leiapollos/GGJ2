@@ -6,9 +6,12 @@ public abstract class Item : MonoBehaviour
 {
     protected Player player;
 
+    protected AudioPlayer sounds;
+
     protected void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        sounds = GetComponent<AudioPlayer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,6 +21,7 @@ public abstract class Item : MonoBehaviour
             Grab();
             Destroy(this.gameObject);
         }
+
     }
 
     public abstract void Grab();

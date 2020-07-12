@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     public float BlinkTime = 0.2f;
     bool invincible;
 
-    AudioPlayer sounds;
+    public AudioPlayer sounds;
     System.Random rand = new System.Random();
 
     Rigidbody2D rb;

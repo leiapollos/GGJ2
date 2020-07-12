@@ -8,5 +8,6 @@ public class HealthItem : Item
     public override void Grab()
     {
         player.lives += numLives;
+        player.sounds.PlayOnce("Health");
     }
 }
