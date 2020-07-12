@@ -24,7 +24,8 @@ public class JumpingEnemy : Enemy
 
         if (IsGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Sqrt(JumpHeight * 2 * Gravity));
+            StartCoroutine(WaitJump());
+           
         }
         if (rb.velocity.y > 0)
         {
@@ -37,5 +38,11 @@ public class JumpingEnemy : Enemy
 
         //Runs Toward Player
         rb.velocity = new Vector2(-Speed, rb.velocity.y);
+    }
+
+    IEnumerator WaitJump()
+    {
+        yield return new WaitForSeconds(0.6f);
+        rb.velocity = new Vector2(rb.velocity.x, Mathf.Sqrt(JumpHeight * 2 * Gravity));
     }
 }
