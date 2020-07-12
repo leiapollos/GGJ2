@@ -1101,56 +1101,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.size
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[15].name
-      value: Coin
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[15].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 68deac90599aed042aed30b1366547ab, type: 3}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[15].volume
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[16].name
-      value: Health
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[16].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 68deac90599aed042aed30b1366547ab, type: 3}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[16].volume
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[17].name
-      value: SuperHealth
-      objectReference: {fileID: 0}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[17].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 68deac90599aed042aed30b1366547ab, type: 3}
-    - target: {fileID: 3898817878887631534, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: AudioClips.Array.data[17].volume
-      value: 0.6
-      objectReference: {fileID: 0}
     - target: {fileID: 8068502059097244708, guid: a63498f412cc37a4cbeb33ad5ed4588d,
         type: 3}
       propertyPath: m_Name
@@ -1210,16 +1160,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8068502059097244713, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 8068502059097244713, guid: a63498f412cc37a4cbeb33ad5ed4588d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a63498f412cc37a4cbeb33ad5ed4588d, type: 3}
