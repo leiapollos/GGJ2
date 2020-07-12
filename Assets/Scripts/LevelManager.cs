@@ -109,6 +109,10 @@ public class LevelManager : MonoBehaviour
             curTimer -= Time.deltaTime;
             if (curTimer <= 0)
             {
+                if(isUnity){
+                    UnityDimensionManager.Instance.Switch();
+                    isUnity = false;
+                }
                 sequencePos++;
                 if (sequencePos < MainSequence.Length)
                 {
