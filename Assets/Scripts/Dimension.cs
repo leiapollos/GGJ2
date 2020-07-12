@@ -9,13 +9,16 @@ public class Dimension : MonoBehaviour
     System.Random random = new System.Random();
     SpriteRenderer[,] backgrounds = new SpriteRenderer[2, 2];
     public float ScrollMultiplier = 1;
+
+    public bool TileX = true, TileY = true;
     Vector2 offset;
     float width, height;
     protected Camera cam;
     // Start is called before the first frame update
     void Start()
     {
-        if(this.gameObject.name.Equals("UnityDimension")){
+        if (this.gameObject.name.Equals("UnityDimension"))
+        {
             UnityDimensionManager.Instance.Switch();
         }
         cam = GameObject.Find("Main Camera Render Texture").GetComponent<Camera>();
@@ -45,9 +48,10 @@ public class Dimension : MonoBehaviour
             {
                 for (int y = 0; y < 2; y++)
                 {
+                    var origPos = backgrounds[x, y].transform.localPosition;
                     var localOffset = new Vector2(offset.x + x * width, offset.y + y * height);
-                    localOffset.x = fmodcirc(localOffset.x, width * 2) - width;
-                    localOffset.y = fmodcirc(localOffset.y, height * 2) - height;
+                    localOffset.x = TileX ? fmodcirc(localOffset.x, width * 2) - width : origPos.x;
+                    localOffset.y = TileY ? fmodcirc(localOffset.y, height * 2) - height : origPos.y;
                     backgrounds[x, y].transform.localPosition = localOffset;
                 }
             }

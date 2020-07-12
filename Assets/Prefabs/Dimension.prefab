@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 57e90139d624c9d47b4230336aa26ecf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 111b5a7438f78e44d93c95c3f8f0c78c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,3 +127,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sections: []
   ScrollMultiplier: 0.5
+  TileX: 1
+  TileY: 0
