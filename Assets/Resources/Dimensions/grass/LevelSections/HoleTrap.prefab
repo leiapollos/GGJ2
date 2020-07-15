@@ -12283,6 +12283,11 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[47].second.m_AllTileFlags
       value: 1073741825
       objectReference: {fileID: 0}
+    - target: {fileID: 6295537178694930738, guid: 6dbe516eeda31884fafd091e0d4055c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8929162192460707386, guid: 6dbe516eeda31884fafd091e0d4055c4,
         type: 3}
       propertyPath: m_Tiles.Array.size
