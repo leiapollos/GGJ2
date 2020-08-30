@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\andre\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\andre\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_GGJ2.1460157735.00" t="ExcludeRecursive" />
+    <e p="C:\Users\andre\Desktop\GGJ2\GGJ2" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="DimensionTransition.cs" t="Include" />
+        <e p="GitMerge-for-Unity" t="Include">
+          <e p="Editor" t="Include">
+            <e p="GameObjectMergeActions.cs" t="Include" />
+            <e p="GitMergeWindow.cs" t="Include" />
+            <e p="MergeActions" t="Include">
+              <e p="MergeAction.cs" t="Include" />
+              <e p="MergeActionChangeValues.cs" t="Include" />
+              <e p="MergeActionDeleteComponent.cs" t="Include" />
+              <e p="MergeActionDeleteGameObject.cs" t="Include" />
+              <e p="MergeActionExistence.cs" t="Include" />
+              <e p="MergeActionNewComponent.cs" t="Include" />
+              <e p="MergeActionNewGameObject.cs" t="Include" />
+              <e p="MergeActionParenting.cs" t="Include" />
+            </e>
+            <e p="MergeManager.cs" t="Include" />
+            <e p="MergeManagerPrefab.cs" t="Include" />
+            <e p="MergeManagerScene.cs" t="Include" />
+            <e p="ObjectDictionaries.cs" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="Licenses.txt" t="Include" />
+            </e>
+            <e p="Resources.cs" t="Include" />
+            <e p="ThirteenPixels.GitMerge.asmdef" t="Include" />
+            <e p="Utilities" t="Include">
+              <e p="GameObjectExtensions.cs" t="Include" />
+              <e p="MergeFilter.cs" t="Include" />
+              <e p="MergeFilterBar.cs" t="Include" />
+              <e p="ObjectExtensions.cs" t="Include" />
+              <e p="ObjectID.cs" t="Include" />
+              <e p="PageView.cs" t="Include" />
+              <e p="SerializedPropertyExtensions.cs" t="Include" />
+            </e>
+            <e p="VCS" t="Include">
+              <e p="VCS.cs" t="Include" />
+              <e p="VCSException.cs" t="Include" />
+              <e p="VCSGit.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="LeanTween" t="Include">
+          <e p="Editor" t="Include">
+            <e p="LeanTweenDocumentationEditor.cs" t="Include" />
+          </e>
+          <e p="Examples" t="Include">
+            <e p="Archived" t="Include">
+              <e p="2dUnlitWithFade.shader" t="Include" />
+              <e p="OldGUIExamplesCS.cs" t="Include" />
+              <e p="TestingPunch.cs" t="Include" />
+              <e p="TestingRigidbodyCS.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Following.cs" t="Include" />
+              <e p="GeneralAdvancedTechniques.cs" t="Include" />
+              <e p="GeneralBasic.cs" t="Include" />
+              <e p="GeneralBasics2d.cs" t="Include" />
+              <e p="GeneralCameraShake.cs" t="Include" />
+              <e p="GeneralEasingTypes.cs" t="Include" />
+              <e p="GeneralEventsListeners.cs" t="Include" />
+              <e p="GeneralSequencer.cs" t="Include" />
+              <e p="GeneralSimpleUI.cs" t="Include" />
+              <e p="GeneralUISpace.cs" t="Include" />
+              <e p="LogoCinematic.cs" t="Include" />
+              <e p="PathBezier.cs" t="Include" />
+              <e p="PathBezier2d.cs" t="Include" />
+              <e p="PathSpline.cs" t="Include" />
+              <e p="PathSpline2d.cs" t="Include" />
+              <e p="PathSplineEndless.cs" t="Include" />
+              <e p="PathSplinePerformance.cs" t="Include" />
+              <e p="PathSplines.cs" t="Include" />
+              <e p="PathSplineTrack.cs" t="Include" />
+              <e p="TestingUnitTests.cs" t="Include" />
+              <e p="TestingZLegacy.cs" t="Include" />
+              <e p="TestingZLegacyExt.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Framework" t="Include">
+            <e p="LeanAudio.cs" t="Include" />
+            <e p="LeanSmooth.cs" t="Include" />
+            <e p="LeanTest.cs" t="Include" />
+            <e p="LeanTween.cs" t="Include" />
+            <e p="LeanTweenExt.cs" t="Include" />
+            <e p="LTDescr.cs" t="Include" />
+            <e p="LTDescrOptional.cs" t="Include" />
+            <e p="LTSeq.cs" t="Include" />
+          </e>
+          <e p="License.txt" t="Include" />
+          <e p="ReadMe.txt" t="Include" />
+        </e>
+        <e p="NewBehaviourScript.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="Audio" t="Include">
+            <e p="AudioPlayer.cs" t="Include" />
+          </e>
+          <e p="CameraExtensions.cs" t="Include" />
+          <e p="CameraMovement.cs" t="Include" />
+          <e p="Dialogue.cs" t="Include" />
+          <e p="DialogueManager.cs" t="Include" />
+          <e p="DialogueTrigger.cs" t="Include" />
+          <e p="Dimension.cs" t="Include" />
+          <e p="Enemies" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="FlyingEnemy.cs" t="Include" />
+            <e p="GhostEnemy.cs" t="Include" />
+            <e p="JumpingEnemy.cs" t="Include" />
+            <e p="RunEnemy.cs" t="Include" />
+          </e>
+          <e p="Fall.cs" t="Include" />
+          <e p="HealthBar.cs" t="Include" />
+          <e p="Items" t="Include">
+            <e p="CoinItem.cs" t="Include" />
+            <e p="HealthItem.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+          </e>
+          <e p="LevelManager.cs" t="Include" />
+          <e p="LevelSection.cs" t="Include" />
+          <e p="MenuManager.cs" t="Include" />
+          <e p="Misc" t="Include">
+            <e p="CameraOrientationExtension.cs" t="Include" />
+            <e p="EasingFunction.cs" t="Include" />
+            <e p="HorizontalDirExtension.cs" t="Include" />
+            <e p="JoystickUtils.cs" t="Include" />
+            <e p="PlatformAttach.cs" t="Include" />
+            <e p="SaveRenderTexture.cs" t="Include" />
+            <e p="TransformChildrenExtension.cs" t="Include" />
+            <e p="UnassignedReference.cs" t="Include" />
+          </e>
+          <e p="Player.cs" t="Include" />
+          <e p="Score.cs" t="Include" />
+          <e p="UnityDimensionManager.cs" t="Include" />
+        </e>
+      </e>
+      <e p="GGJ2.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="ThirteenPixels.GitMerge.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>
