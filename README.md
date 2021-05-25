@@ -12,4 +12,4 @@ This game was made in 48 hours for the GMTK Game Jam 2020, where the theme was "
 
 ### Itch.IO Link
 
-[Quest Game]https://ther00t27.itch.io/quest-game
+https://ther00t27.itch.io/quest-game
